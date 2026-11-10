@@ -1,17 +1,54 @@
 
+// =====================================
+// FLASHCARD DE NOMES SIGNIFICATIVOS
+// =====================================
+
+const flashcard = document.getElementById("flashcard-nomes");
+
+const perguntaFlashcard = document.getElementById(
+    "pergunta-flashcard"
+);
+
+const respostaFlashcard = document.getElementById(
+    "resposta-flashcard"
+);
+
+const instrucaoFlashcard = document.getElementById(
+    "instrucao-flashcard"
+);
+
+flashcard.addEventListener("click", () => {
+    const estaAberto =
+        flashcard.getAttribute("aria-expanded") === "true";
+
+    flashcard.setAttribute(
+        "aria-expanded",
+        String(!estaAberto)
+    );
+
+    perguntaFlashcard.hidden = !estaAberto;
+    respostaFlashcard.hidden = estaAberto;
+
+    instrucaoFlashcard.textContent = estaAberto
+        ? "Clique para revelar a resposta"
+        : "Clique para ver a pergunta";
+});
+
+// =====================================
+// QUIZ DE CLEAN CODE
+// =====================================
+
 const alternativas = document.querySelectorAll(".alternativa");
 
 const resultado = document.getElementById("resultado-quiz");
 
 const botaoReiniciar = document.getElementById("reiniciar-quiz");
 
-// Verifica a resposta escolhida
 alternativas.forEach((alternativa) => {
     alternativa.addEventListener("click", () => {
 
         const correta = alternativa.dataset.correta === "true";
 
-        // Bloqueia as alternativas após responder
         alternativas.forEach((botao) => {
             botao.disabled = true;
 
@@ -35,7 +72,6 @@ alternativas.forEach((alternativa) => {
     });
 });
 
-// Permite tentar novamente
 botaoReiniciar.addEventListener("click", () => {
 
     alternativas.forEach((alternativa) => {

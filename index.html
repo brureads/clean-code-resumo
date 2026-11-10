@@ -32,9 +32,12 @@
 
         <nav class="navegacao" aria-label="Navegação do resumo">
             <a href="#conceitos">Conceitos</a>
+            <a href="#nomes">Nomes significativos</a>
             <a href="#exemplos">Exemplos</a>
             <a href="#revisao">Revisão</a>
         </nav>
+
+        <!-- CONCEITOS FUNDAMENTAIS -->
 
         <section id="conceitos" class="secao">
             <div class="titulo-secao">
@@ -68,7 +71,6 @@
                                 o escreveu, mas também para outros
                                 desenvolvedores.
                             </p>
-
                             <p>
                                 O objetivo é reduzir a complexidade
                                 desnecessária e facilitar futuras
@@ -97,7 +99,6 @@
                                 temp ou dados quando eles não
                                 comunicam o significado.
                             </p>
-
                             <p>
                                 Prefira nomes específicos, como
                                 idadeUsuario, totalCompra ou
@@ -126,7 +127,6 @@
                                 bem definida, evitando acumular
                                 responsabilidades diferentes.
                             </p>
-
                             <p>
                                 Funções pequenas e bem nomeadas
                                 costumam facilitar a leitura,
@@ -138,6 +138,104 @@
 
             </div>
         </section>
+
+        <!-- NOMES SIGNIFICATIVOS -->
+
+        <section id="nomes" class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">APROFUNDAMENTO</span>
+                    <h2>Nomes significativos</h2>
+                </div>
+                <p>Um bom nome explica a intenção do código.</p>
+            </div>
+
+            <div class="grade-conceitos">
+
+                <article class="card">
+                    <span class="numero-card">REGRA 01</span>
+                    <h3>Seja descritivo</h3>
+
+                    <p>
+                        Escolha nomes que mostrem o que uma
+                        variável, classe ou função representa.
+                    </p>
+
+                    <div class="separador"></div>
+
+                    <p class="exemplo-label">EVITE</p>
+                    <code class="codigo-inline">int x = 20;</code>
+
+                    <p class="exemplo-label">PREFIRA</p>
+                    <code class="codigo-inline">int idade = 20;</code>
+                </article>
+
+                <article class="card">
+                    <span class="numero-card">REGRA 02</span>
+                    <h3>Evite abreviações confusas</h3>
+
+                    <p>
+                        Abreviações pouco conhecidas dificultam
+                        a compreensão e exigem interpretação.
+                    </p>
+
+                    <div class="separador"></div>
+
+                    <p class="exemplo-label">EVITE</p>
+                    <code class="codigo-inline">int qtdUsr = 10;</code>
+
+                    <p class="exemplo-label">PREFIRA</p>
+                    <code class="codigo-inline">int quantidadeUsuarios = 10;</code>
+                </article>
+
+                <article class="card">
+                    <span class="numero-card">REGRA 03</span>
+                    <h3>Mantenha consistência</h3>
+
+                    <p>
+                        Siga as convenções da linguagem e
+                        mantenha o mesmo padrão no projeto.
+                    </p>
+
+                    <div class="separador"></div>
+
+                    <p class="exemplo-label">EM C#</p>
+                    <code class="codigo-inline">int totalCompra = 50;</code>
+
+                    <p class="exemplo-label">MÉTODOS</p>
+                    <code class="codigo-inline">CalcularDesconto()</code>
+                </article>
+            </div>
+
+            <div class="card flashcard-container">
+                <div>
+                    <span class="numero-card">FLASHCARD DE REVISÃO</span>
+                    <h3>Teste sua memória</h3>
+                    <p>
+                        Tente responder antes de revelar a explicação.
+                    </p>
+                </div>
+
+                <button class="flashcard" id="flashcard-nomes" type="button" aria-expanded="false"
+                    aria-controls="resposta-flashcard">
+                    <span id="pergunta-flashcard">
+                        Por que devemos evitar nomes como x, a ou temp?
+                    </span>
+
+                    <span id="resposta-flashcard" hidden>
+                        Porque nomes genéricos não explicam a
+                        intenção do código. Nomes significativos
+                        tornam a leitura e a manutenção mais fáceis.
+                    </span>
+
+                    <small id="instrucao-flashcard">
+                        Clique para revelar a resposta
+                    </small>
+                </button>
+            </div>
+        </section>
+
+        <!-- EXEMPLOS -->
 
         <section id="exemplos" class="secao">
             <div class="titulo-secao">
@@ -187,19 +285,24 @@ int total = preco * quantidade;</code></pre>
             </div>
         </section>
 
+        <!-- REVISÃO -->
+
         <section id="revisao" class="secao">
             <div class="titulo-secao">
                 <div>
                     <span class="etiqueta">PARTE 03</span>
                     <h2>Hora de revisar</h2>
                 </div>
-                <p>Uma perguntinha para fixar o conteúdo!</p>
+                <p>Uma pergunta para fixar o conteúdo!</p>
             </div>
 
             <div class="card quiz">
                 <span class="numero-card">QUESTÃO 01</span>
 
-                <h3>Qual alternativa representa uma boa prática de Clean Code?</h3>
+                <h3>
+                    Qual alternativa representa uma boa prática
+                    de Clean Code?
+                </h3>
 
                 <div class="alternativas">
                     <button class="alternativa" data-correta="false">
@@ -224,9 +327,9 @@ int total = preco * quantidade;</code></pre>
         </section>
 
         <footer class="rodape">
-            Clean Code • Resumo interativo desenvolvido com HTML, CSS e JavaScript
+            Clean Code • Resumo interativo desenvolvido
+            com HTML, CSS e JavaScript
         </footer>
-
     </main>
 </body>
 
