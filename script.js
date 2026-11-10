@@ -1,88 +1,118 @@
 
-// =====================================
-// FLASHCARD DE NOMES SIGNIFICATIVOS
-// =====================================
+// ==========================================
+// FLASHCARDS INTERATIVOS
+// ==========================================
 
-const flashcard = document.getElementById("flashcard-nomes");
+function configurarFlashcard(
+    cardId,
+    perguntaId,
+    respostaId,
+    instrucaoId
+) {
+    const card = document.getElementById(cardId);
+    const pergunta = document.getElementById(perguntaId);
+    const resposta = document.getElementById(respostaId);
+    const instrucao = document.getElementById(instrucaoId);
 
-const perguntaFlashcard = document.getElementById(
-    "pergunta-flashcard"
-);
+    if (!card || !pergunta || !resposta || !instrucao) {
+        return;
+    }
 
-const respostaFlashcard = document.getElementById(
-    "resposta-flashcard"
-);
+    card.addEventListener("click", () => {
+        const estaAberto =
+            card.getAttribute("aria-expanded") === "true";
 
-const instrucaoFlashcard = document.getElementById(
+        const novoEstado = !estaAberto;
+
+        card.setAttribute(
+            "aria-expanded",
+            String(novoEstado)
+        );
+
+        pergunta.hidden = novoEstado;
+        resposta.hidden = !novoEstado;
+
+        instrucao.textContent = novoEstado
+            ? "Clique para ver a pergunta"
+            : "Clique para revelar a resposta";
+    });
+}
+
+// Flashcard de Nomes Significativos
+configurarFlashcard(
+    "flashcard-nomes",
+    "pergunta-flashcard",
+    "resposta-flashcard",
     "instrucao-flashcard"
 );
 
-flashcard.addEventListener("click", () => {
-    const estaAberto =
-        flashcard.getAttribute("aria-expanded") === "true";
+// Flashcard de Funções e Métodos
+configurarFlashcard(
+    "flashcard-funcoes",
+    "pergunta-funcoes",
+    "resposta-funcoes",
+    "instrucao-funcoes"
+);
 
-    flashcard.setAttribute(
-        "aria-expanded",
-        String(!estaAberto)
-    );
+// ==========================================
+// QUIZZES INTERATIVOS
+// ==========================================
 
-    perguntaFlashcard.hidden = !estaAberto;
-    respostaFlashcard.hidden = estaAberto;
-
-    instrucaoFlashcard.textContent = estaAberto
-        ? "Clique para revelar a resposta"
-        : "Clique para ver a pergunta";
-});
-
-// =====================================
-// QUIZ DE CLEAN CODE
-// =====================================
-
-const alternativas = document.querySelectorAll(".alternativa");
-
-const resultado = document.getElementById("resultado-quiz");
-
-const botaoReiniciar = document.getElementById("reiniciar-quiz");
-
-alternativas.forEach((alternativa) => {
-    alternativa.addEventListener("click", () => {
-
-        const correta = alternativa.dataset.correta === "true";
-
-        alternativas.forEach((botao) => {
-            botao.disabled = true;
-
-            if (botao.dataset.correta === "true") {
-                botao.classList.add("correta");
-            }
-        });
-
-        if (correta) {
-            resultado.textContent =
-                "Resposta correta! Funções devem ter responsabilidades claras.";
-        } else {
-            alternativa.classList.add("incorreta");
-
-            resultado.textContent =
-                "Quase! A resposta correta é a alternativa B. " +
-                "Cada função deve ter uma responsabilidade bem definida.";
-        }
-
-        botaoReiniciar.hidden = false;
-    });
-});
-
-botaoReiniciar.addEventListener("click", () => {
+function configurarQuiz(quiz) {
+    const alternativas = quiz.querySelectorAll(".alternativa");
+    const resultado = quiz.querySelector(".resultado");
+    const botaoReiniciar = quiz.querySelector(".reiniciar");
 
     alternativas.forEach((alternativa) => {
-        alternativa.disabled = false;
+        alternativa.addEventListener("click", () => {
 
-        alternativa.classList.remove(
-            "correta",
-            "incorreta"
-        );
+            const acertou =
+                alternativa.dataset.correta === "true";
+
+            // Bloqueia respostas após a escolha
+            alternativas.forEach((botao) => {
+                botao.disabled = true;
+
+                if (botao.dataset.correta === "true") {
+                    botao.classList.add("correta");
+                }
+            });
+
+            if (acertou) {
+                resultado.textContent =
+                    "Resposta correta! Muito bem!";
+            } else {
+                alternativa.classList.add("incorreta");
+
+                resultado.textContent =
+                    "Ainda não! A alternativa destacada " +
+                    "em verde é a resposta correta.";
+            }
+
+            botaoReiniciar.hidden = false;
+        });
     });
 
-    resultado.textContent = "";
-    botaoReiniciar.hidden = true;
+    // Reinicia somente o quiz selecionado
+    botaoReiniciar.addEventListener("click", () => {
+
+        alternativas.forEach((alternativa) => {
+            alternativa.disabled = false;
+
+            alternativa.classList.remove(
+                "correta",
+                "incorreta"
+            );
+        });
+
+        resultado.textContent = "";
+        botaoReiniciar.hidden = true;
+    });
+}
+
+// Configura todos os quizzes da página
+const quizzes = document.querySelectorAll("[data-quiz]");
+
+quizzes.forEach((quiz) => {
+    configurarQuiz(quiz);
 });

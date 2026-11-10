@@ -1,16 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Clean Code | Resumo Interativo</title>
-
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-
 <body>
     <main class="pagina">
 
@@ -20,7 +17,7 @@
                 <h1>Clean Code<span class="ponto">.</span></h1>
                 <p class="descricao">
                     Um resumo interativo sobre como escrever
-                    códigos mais claros, organizados e fáceis de manter.
+                    códigos claros, organizados e fáceis de manter.
                 </p>
             </div>
 
@@ -33,11 +30,12 @@
         <nav class="navegacao" aria-label="Navegação do resumo">
             <a href="#conceitos">Conceitos</a>
             <a href="#nomes">Nomes significativos</a>
+            <a href="#funcoes">Funções e métodos</a>
             <a href="#exemplos">Exemplos</a>
             <a href="#revisao">Revisão</a>
         </nav>
 
-        <!-- CONCEITOS FUNDAMENTAIS -->
+        <!-- INTRODUÇÃO -->
 
         <section id="conceitos" class="secao">
             <div class="titulo-secao">
@@ -45,7 +43,7 @@
                     <span class="etiqueta">PARTE 01</span>
                     <h2>Conceitos fundamentais</h2>
                 </div>
-                <p>Selecione um card para aprofundar o conteúdo.</p>
+                <p>Clique nos cards para aprofundar o conteúdo.</p>
             </div>
 
             <div class="grade-conceitos">
@@ -53,28 +51,18 @@
                 <article class="card">
                     <span class="numero-card">01 / INTRODUÇÃO</span>
                     <h3>O que é Clean Code?</h3>
-
                     <p>
-                        É a prática de escrever código que seja
-                        fácil de ler, compreender e manter.
+                        É a prática de escrever código fácil
+                        de ler, compreender e manter.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Clean Code significa código limpo.
-                                Um código de qualidade deve ser
-                                compreensível não apenas para quem
-                                o escreveu, mas também para outros
-                                desenvolvedores.
-                            </p>
-                            <p>
-                                O objetivo é reduzir a complexidade
-                                desnecessária e facilitar futuras
-                                alterações no sistema.
+                                Código limpo comunica sua intenção.
+                                Ele evita complexidade desnecessária
+                                e facilita futuras modificações.
                             </p>
                         </div>
                     </details>
@@ -83,26 +71,18 @@
                 <article class="card">
                     <span class="numero-card">02 / NOMENCLATURA</span>
                     <h3>Nomes significativos</h3>
-
                     <p>
-                        Variáveis, métodos e classes devem ter nomes
-                        que expliquem claramente sua finalidade.
+                        Variáveis, métodos e classes devem ter
+                        nomes que expliquem sua finalidade.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Evite nomes genéricos como x, a,
-                                temp ou dados quando eles não
-                                comunicam o significado.
-                            </p>
-                            <p>
-                                Prefira nomes específicos, como
-                                idadeUsuario, totalCompra ou
-                                calcularDesconto.
+                                Evite nomes genéricos, como x
+                                e temp, quando não comunicam
+                                o significado dos dados.
                             </p>
                         </div>
                     </details>
@@ -111,26 +91,18 @@
                 <article class="card">
                     <span class="numero-card">03 / ORGANIZAÇÃO</span>
                     <h3>Funções</h3>
-
                     <p>
-                        Cada função deve ter uma responsabilidade
-                        bem definida e ser fácil de entender.
+                        Cada função deve ter um propósito
+                        bem definido e fácil de entender.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Uma função deve executar uma tarefa
-                                bem definida, evitando acumular
-                                responsabilidades diferentes.
-                            </p>
-                            <p>
-                                Funções pequenas e bem nomeadas
-                                costumam facilitar a leitura,
-                                os testes e a manutenção.
+                                Funções focadas em uma tarefa
+                                costumam ser mais simples
+                                de testar e modificar.
                             </p>
                         </div>
                     </details>
@@ -144,7 +116,7 @@
         <section id="nomes" class="secao">
             <div class="titulo-secao">
                 <div>
-                    <span class="etiqueta">APROFUNDAMENTO</span>
+                    <span class="etiqueta">APROFUNDAMENTO 01</span>
                     <h2>Nomes significativos</h2>
                 </div>
                 <p>Um bom nome explica a intenção do código.</p>
@@ -155,35 +127,27 @@
                 <article class="card">
                     <span class="numero-card">REGRA 01</span>
                     <h3>Seja descritivo</h3>
-
                     <p>
-                        Escolha nomes que mostrem o que uma
-                        variável, classe ou função representa.
+                        Use nomes que expliquem o significado
+                        das informações.
                     </p>
-
                     <div class="separador"></div>
-
                     <p class="exemplo-label">EVITE</p>
                     <code class="codigo-inline">int x = 20;</code>
-
                     <p class="exemplo-label">PREFIRA</p>
                     <code class="codigo-inline">int idade = 20;</code>
                 </article>
 
                 <article class="card">
                     <span class="numero-card">REGRA 02</span>
-                    <h3>Evite abreviações confusas</h3>
-
+                    <h3>Evite abreviações</h3>
                     <p>
-                        Abreviações pouco conhecidas dificultam
-                        a compreensão e exigem interpretação.
+                        Abreviações confusas dificultam
+                        a compreensão do código.
                     </p>
-
                     <div class="separador"></div>
-
                     <p class="exemplo-label">EVITE</p>
                     <code class="codigo-inline">int qtdUsr = 10;</code>
-
                     <p class="exemplo-label">PREFIRA</p>
                     <code class="codigo-inline">int quantidadeUsuarios = 10;</code>
                 </article>
@@ -191,41 +155,41 @@
                 <article class="card">
                     <span class="numero-card">REGRA 03</span>
                     <h3>Mantenha consistência</h3>
-
                     <p>
-                        Siga as convenções da linguagem e
-                        mantenha o mesmo padrão no projeto.
+                        Respeite as convenções da linguagem
+                        e do projeto.
                     </p>
-
                     <div class="separador"></div>
-
-                    <p class="exemplo-label">EM C#</p>
+                    <p class="exemplo-label">VARIÁVEIS EM C#</p>
                     <code class="codigo-inline">int totalCompra = 50;</code>
-
-                    <p class="exemplo-label">MÉTODOS</p>
+                    <p class="exemplo-label">MÉTODOS EM C#</p>
                     <code class="codigo-inline">CalcularDesconto()</code>
                 </article>
+
             </div>
 
             <div class="card flashcard-container">
                 <div>
-                    <span class="numero-card">FLASHCARD DE REVISÃO</span>
+                    <span class="numero-card">FLASHCARD</span>
                     <h3>Teste sua memória</h3>
-                    <p>
-                        Tente responder antes de revelar a explicação.
-                    </p>
+                    <p>Responda mentalmente antes de revelar.</p>
                 </div>
 
-                <button class="flashcard" id="flashcard-nomes" type="button" aria-expanded="false"
-                    aria-controls="resposta-flashcard">
+                <button
+                    class="flashcard"
+                    id="flashcard-nomes"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="resposta-flashcard"
+                >
                     <span id="pergunta-flashcard">
-                        Por que devemos evitar nomes como x, a ou temp?
+                        Por que devemos evitar nomes como x ou temp?
                     </span>
 
                     <span id="resposta-flashcard" hidden>
-                        Porque nomes genéricos não explicam a
-                        intenção do código. Nomes significativos
-                        tornam a leitura e a manutenção mais fáceis.
+                        Porque nomes genéricos não explicam
+                        a intenção do código, dificultando
+                        a leitura e a manutenção.
                     </span>
 
                     <small id="instrucao-flashcard">
@@ -235,7 +199,215 @@
             </div>
         </section>
 
-        <!-- EXEMPLOS -->
+        <!-- FUNÇÕES E MÉTODOS -->
+
+        <section id="funcoes" class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">APROFUNDAMENTO 02</span>
+                    <h2>Funções e métodos</h2>
+                </div>
+                <p>Escreva métodos claros e com objetivos definidos.</p>
+            </div>
+
+            <div class="grade-conceitos">
+
+                <article class="card">
+                    <span class="numero-card">PRINCÍPIO 01</span>
+                    <h3>Responsabilidade única</h3>
+                    <p>
+                        Cada método deve executar uma tarefa
+                        bem definida.
+                    </p>
+                    <div class="separador"></div>
+                    <details>
+                        <summary>Ver explicação</summary>
+                        <div class="detalhes-conteudo">
+                            <p>
+                                Evite misturar cálculos, exibição
+                                de mensagens e acesso ao banco
+                                de dados no mesmo método.
+                            </p>
+                            <p>
+                                Métodos separados facilitam
+                                alterações e testes.
+                            </p>
+                        </div>
+                    </details>
+                </article>
+
+                <article class="card">
+                    <span class="numero-card">PRINCÍPIO 02</span>
+                    <h3>Funções pequenas</h3>
+                    <p>
+                        Prefira métodos curtos, desde que
+                        continuem claros e coesos.
+                    </p>
+                    <div class="separador"></div>
+                    <details>
+                        <summary>Ver explicação</summary>
+                        <div class="detalhes-conteudo">
+                            <p>
+                                Métodos muito extensos podem
+                                esconder responsabilidades diferentes.
+                            </p>
+                            <p>
+                                Não existe um número mágico de linhas.
+                                A clareza é mais importante
+                                que atingir um tamanho específico.
+                            </p>
+                        </div>
+                    </details>
+                </article>
+
+                <article class="card">
+                    <span class="numero-card">PRINCÍPIO 03</span>
+                    <h3>Parâmetros</h3>
+                    <p>
+                        Evite listas enormes de parâmetros
+                        difíceis de compreender.
+                    </p>
+                    <div class="separador"></div>
+                    <details>
+                        <summary>Ver explicação</summary>
+                        <div class="detalhes-conteudo">
+                            <p>
+                                Muitos parâmetros podem dificultar
+                                a chamada e o teste de um método.
+                            </p>
+                            <p>
+                                Quando os valores representam
+                                um mesmo conceito, considere
+                                agrupá-los em um objeto apropriado.
+                            </p>
+                        </div>
+                    </details>
+                </article>
+
+            </div>
+
+            <div class="titulo-interno">
+                <span class="etiqueta">EXEMPLO EM C#</span>
+                <h3>Separando responsabilidades</h3>
+                <p>
+                    Os dois exemplos produzem o mesmo resultado.
+                    O segundo separa o cálculo da apresentação.
+                </p>
+            </div>
+
+            <div class="grade-exemplos">
+
+                <article class="card codigo-card">
+                    <span class="etiqueta exemplo-ruim">
+                        ANTES — RESPONSABILIDADES MISTURADAS
+                    </span>
+                    <h3>Um método faz tudo</h3>
+
+                    <pre><code>void MostrarTotal(
+    decimal preco,
+    int quantidade)
+{
+    decimal total =
+        preco * quantidade;
+
+    Console.WriteLine(
+        $"Total: {total:C}");
+}</code></pre>
+
+                    <p>
+                        O método calcula o total e também
+                        decide como exibi-lo.
+                    </p>
+                </article>
+
+                <article class="card codigo-card">
+                    <span class="etiqueta exemplo-bom">
+                        DEPOIS — RESPONSABILIDADES SEPARADAS
+                    </span>
+                    <h3>Métodos com objetivos claros</h3>
+
+                    <pre><code>decimal CalcularTotal(
+    decimal preco,
+    int quantidade)
+{
+    return preco * quantidade;
+}
+
+void MostrarTotal(decimal total)
+{
+    Console.WriteLine(
+        $"Total: {total:C}");
+}
+
+decimal total =
+    CalcularTotal(20m, 5);
+
+MostrarTotal(total);</code></pre>
+
+                    <p>
+                        Agora um método calcula o valor,
+                        enquanto outro apresenta o resultado.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="card flashcard-container">
+                <div>
+                    <span class="numero-card">FLASHCARD</span>
+                    <h3>Funções e métodos</h3>
+                    <p>Tente lembrar o conceito antes de clicar.</p>
+                </div>
+
+                <button
+                    class="flashcard"
+                    id="flashcard-funcoes"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="resposta-funcoes"
+                >
+                    <span id="pergunta-funcoes">
+                        O que significa um método ter
+                        responsabilidade única?
+                    </span>
+
+                    <span id="resposta-funcoes" hidden>
+                        Significa que o método possui uma
+                        finalidade bem definida e não acumula
+                        tarefas de naturezas diferentes.
+                    </span>
+
+                    <small id="instrucao-funcoes">
+                        Clique para revelar a resposta
+                    </small>
+                </button>
+            </div>
+
+            <div class="card quiz" data-quiz>
+                <span class="numero-card">EXERCÍCIO — FUNÇÕES</span>
+                <h3>Qual método segue melhor os princípios de Clean Code?</h3>
+
+                <div class="alternativas">
+                    <button class="alternativa" data-correta="false">
+                        A. Um método que calcula, salva e imprime um relatório.
+                    </button>
+                    <button class="alternativa" data-correta="true">
+                        B. Um método chamado CalcularMedia() que apenas calcula a média.
+                    </button>
+                    <button class="alternativa" data-correta="false">
+                        C. Um método com dezenas de parâmetros sem nomes claros.
+                    </button>
+                </div>
+
+                <p class="resultado" role="status" aria-live="polite"></p>
+
+                <button class="reiniciar" type="button" hidden>
+                    Tentar novamente
+                </button>
+            </div>
+        </section>
+
+        <!-- EXEMPLOS DE NOMENCLATURA -->
 
         <section id="exemplos" class="secao">
             <div class="titulo-secao">
@@ -243,15 +415,15 @@
                     <span class="etiqueta">PARTE 02</span>
                     <h2>Clean Code na prática</h2>
                 </div>
-                <p>Compare dois exemplos escritos em C#.</p>
+                <p>Comparando nomes de variáveis em C#.</p>
             </div>
 
             <div class="grade-exemplos">
+
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-ruim">
                         ANTES — POUCO CLARO
                     </span>
-
                     <h3>Nome genérico</h3>
 
                     <pre><code>int x = 20;
@@ -260,8 +432,8 @@ int y = 5;
 int z = x * y;</code></pre>
 
                     <p>
-                        O código funciona, mas os nomes não
-                        explicam o significado dos valores.
+                        Os nomes não explicam o significado
+                        dos valores.
                     </p>
                 </article>
 
@@ -269,7 +441,6 @@ int z = x * y;</code></pre>
                     <span class="etiqueta exemplo-bom">
                         DEPOIS — MAIS CLARO
                     </span>
-
                     <h3>Nome significativo</h3>
 
                     <pre><code>int preco = 20;
@@ -278,14 +449,15 @@ int quantidade = 5;
 int total = preco * quantidade;</code></pre>
 
                     <p>
-                        Agora conseguimos entender a intenção
-                        do cálculo sem precisar investigar.
+                        A intenção do cálculo fica muito
+                        mais fácil de entender.
                     </p>
                 </article>
+
             </div>
         </section>
 
-        <!-- REVISÃO -->
+        <!-- REVISÃO GERAL -->
 
         <section id="revisao" class="secao">
             <div class="titulo-secao">
@@ -293,12 +465,11 @@ int total = preco * quantidade;</code></pre>
                     <span class="etiqueta">PARTE 03</span>
                     <h2>Hora de revisar</h2>
                 </div>
-                <p>Uma pergunta para fixar o conteúdo!</p>
+                <p>Teste o que aprendeu!</p>
             </div>
 
-            <div class="card quiz">
+            <div class="card quiz" data-quiz>
                 <span class="numero-card">QUESTÃO 01</span>
-
                 <h3>
                     Qual alternativa representa uma boa prática
                     de Clean Code?
@@ -318,9 +489,9 @@ int total = preco * quantidade;</code></pre>
                     </button>
                 </div>
 
-                <p id="resultado-quiz" class="resultado" role="status" aria-live="polite"></p>
+                <p class="resultado" role="status" aria-live="polite"></p>
 
-                <button id="reiniciar-quiz" class="reiniciar" hidden>
+                <button class="reiniciar" type="button" hidden>
                     Tentar novamente
                 </button>
             </div>
@@ -330,7 +501,7 @@ int total = preco * quantidade;</code></pre>
             Clean Code • Resumo interativo desenvolvido
             com HTML, CSS e JavaScript
         </footer>
+
     </main>
 </body>
-
 </html>
