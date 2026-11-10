@@ -4,107 +4,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Code Universe</title>
+
+    <title>Clean Code | Resumo Interativo</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <main class="universo">
-        <header class="hero">
-            <p class="marca">SPACE STUDY MODE</p>
+    <main class="pagina">
 
-            <h1>Clean Code Universe</h1>
+        <header class="cabecalho">
+            <div>
+                <span class="etiqueta">GUIA DE ESTUDOS</span>
+                <h1>Clean Code<span class="ponto">.</span></h1>
+                <p class="descricao">
+                    Um resumo interativo sobre como escrever
+                    códigos mais claros, organizados e fáceis de manter.
+                </p>
+            </div>
 
-            <p class="subtitulo">
-                Explore os princípios do Clean Code como se cada conceito
-                fosse uma nova galáxia a ser descoberta.
-            </p>
-
-            <div class="hero-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Estudo Interativo</span>
+            <div class="indicador">
+                <span class="indicador-numero">03</span>
+                <span>assuntos disponíveis</span>
             </div>
         </header>
 
-        <section class="painel">
-            <article class="cartao destaque">
-                <p class="cartao-topo">MISSÃO INICIAL</p>
-                <h2>O que é Clean Code?</h2>
-                <p>
-                    Clean Code é a prática de escrever código de forma clara,
-                    organizada e fácil de manter. Não basta funcionar: o código
-                    também precisa ser compreensível.
-                </p>
-            </article>
+        <nav class="navegacao" aria-label="Navegação do resumo">
+            <a href="#conceitos">Conceitos</a>
+            <a href="#exemplos">Exemplos</a>
+            <a href="#revisao">Revisão</a>
+        </nav>
 
-            <article class="cartao mini">
-                <p class="cartao-topo">OBJETIVO</p>
-                <h3>Por que isso importa?</h3>
-                <p>
-                    Porque código confuso atrapalha manutenção, correções
-                    e evolução do sistema.
-                </p>
-            </article>
-
-            <article class="cartao mini">
-                <p class="cartao-topo">FOCO</p>
-                <h3>O que vamos estudar?</h3>
-                <p>
-                    Nomes significativos, funções, comentários, organização,
-                    legibilidade e boas práticas.
-                </p>
-            </article>
-        </section>
-
-        <section class="secao-estudo">
-            <div class="secao-titulo">
-                <p class="cartao-topo">CARD INTERATIVO</p>
-                <h2>Primeira parada da jornada</h2>
-                <p>
-                    Clique no card abaixo para abrir e fechar a explicação.
-                </p>
+        <section id="conceitos" class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">PARTE 01</span>
+                    <h2>Conceitos fundamentais</h2>
+                </div>
+                <p>Selecione um card para aprofundar o conteúdo.</p>
             </div>
 
-            <button class="card-interativo" id="card-clean-code" type="button" aria-expanded="false"
-                aria-controls="resposta-clean-code">
-                <span class="orbita"></span>
+            <div class="grade-conceitos">
 
-                <span class="card-interativo-topo">
-                    PLANETA 01
-                </span>
+                <article class="card">
+                    <span class="numero-card">01 / INTRODUÇÃO</span>
+                    <h3>O que é Clean Code?</h3>
 
-                <span class="card-interativo-titulo">
-                    O que é Clean Code?
-                </span>
+                    <p>
+                        É a prática de escrever código que seja
+                        fácil de ler, compreender e manter.
+                    </p>
 
-                <span class="card-interativo-instrucao">
-                    Clique para explorar
-                </span>
+                    <div class="separador"></div>
 
-                <span class="card-interativo-resposta" id="resposta-clean-code" hidden>
-                    Clean Code é um código limpo, claro e fácil de entender.
+                    <details>
+                        <summary>Entenda melhor</summary>
+                        <div class="detalhes-conteudo">
+                            <p>
+                                Clean Code significa código limpo.
+                                Um código de qualidade deve ser
+                                compreensível não apenas para quem
+                                o escreveu, mas também para outros
+                                desenvolvedores.
+                            </p>
 
-                    A ideia principal é escrever de forma que outra pessoa
-                    — ou até você no futuro — consiga ler e compreender
-                    rapidamente o que aquele código faz.
+                            <p>
+                                O objetivo é reduzir a complexidade
+                                desnecessária e facilitar futuras
+                                alterações no sistema.
+                            </p>
+                        </div>
+                    </details>
+                </article>
 
-                    Um código limpo costuma ser:
-                    • legível
-                    • simples
-                    • organizado
-                    • fácil de manter
-                    • fácil de alterar
-                </span>
-            </button>
+                <article class="card">
+                    <span class="numero-card">02 / NOMENCLATURA</span>
+                    <h3>Nomes significativos</h3>
+
+                    <p>
+                        Variáveis, métodos e classes devem ter nomes
+                        que expliquem claramente sua finalidade.
+                    </p>
+
+                    <div class="separador"></div>
+
+                    <details>
+                        <summary>Entenda melhor</summary>
+                        <div class="detalhes-conteudo">
+                            <p>
+                                Evite nomes genéricos como x, a,
+                                temp ou dados quando eles não
+                                comunicam o significado.
+                            </p>
+
+                            <p>
+                                Prefira nomes específicos, como
+                                idadeUsuario, totalCompra ou
+                                calcularDesconto.
+                            </p>
+                        </div>
+                    </details>
+                </article>
+
+                <article class="card">
+                    <span class="numero-card">03 / ORGANIZAÇÃO</span>
+                    <h3>Funções</h3>
+
+                    <p>
+                        Cada função deve ter uma responsabilidade
+                        bem definida e ser fácil de entender.
+                    </p>
+
+                    <div class="separador"></div>
+
+                    <details>
+                        <summary>Entenda melhor</summary>
+                        <div class="detalhes-conteudo">
+                            <p>
+                                Uma função deve executar uma tarefa
+                                bem definida, evitando acumular
+                                responsabilidades diferentes.
+                            </p>
+
+                            <p>
+                                Funções pequenas e bem nomeadas
+                                costumam facilitar a leitura,
+                                os testes e a manutenção.
+                            </p>
+                        </div>
+                    </details>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="exemplos" class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">PARTE 02</span>
+                    <h2>Clean Code na prática</h2>
+                </div>
+                <p>Compare dois exemplos escritos em C#.</p>
+            </div>
+
+            <div class="grade-exemplos">
+                <article class="card codigo-card">
+                    <span class="etiqueta exemplo-ruim">
+                        ANTES — POUCO CLARO
+                    </span>
+
+                    <h3>Nome genérico</h3>
+
+                    <pre><code>int x = 20;
+int y = 5;
+
+int z = x * y;</code></pre>
+
+                    <p>
+                        O código funciona, mas os nomes não
+                        explicam o significado dos valores.
+                    </p>
+                </article>
+
+                <article class="card codigo-card">
+                    <span class="etiqueta exemplo-bom">
+                        DEPOIS — MAIS CLARO
+                    </span>
+
+                    <h3>Nome significativo</h3>
+
+                    <pre><code>int preco = 20;
+int quantidade = 5;
+
+int total = preco * quantidade;</code></pre>
+
+                    <p>
+                        Agora conseguimos entender a intenção
+                        do cálculo sem precisar investigar.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="revisao" class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">PARTE 03</span>
+                    <h2>Hora de revisar</h2>
+                </div>
+                <p>Uma perguntinha para fixar o conteúdo!</p>
+            </div>
+
+            <div class="card quiz">
+                <span class="numero-card">QUESTÃO 01</span>
+
+                <h3>Qual alternativa representa uma boa prática de Clean Code?</h3>
+
+                <div class="alternativas">
+                    <button class="alternativa" data-correta="false">
+                        A. Usar nomes curtos e sem significado.
+                    </button>
+
+                    <button class="alternativa" data-correta="true">
+                        B. Criar funções com responsabilidades claras.
+                    </button>
+
+                    <button class="alternativa" data-correta="false">
+                        C. Escrever todo o programa em uma única função.
+                    </button>
+                </div>
+
+                <p id="resultado-quiz" class="resultado" role="status" aria-live="polite"></p>
+
+                <button id="reiniciar-quiz" class="reiniciar" hidden>
+                    Tentar novamente
+                </button>
+            </div>
         </section>
 
         <footer class="rodape">
-            <p>Feito por uma exploradora espacial do código. ✦</p>
+            Clean Code • Resumo interativo desenvolvido com HTML, CSS e JavaScript
         </footer>
+
     </main>
 </body>
 
