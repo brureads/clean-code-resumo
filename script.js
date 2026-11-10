@@ -1,76 +1,59 @@
 
-// ==========================================
-// FLASHCARDS INTERATIVOS
-// ==========================================
+// ======================================
+// FLASHCARDS
+// ======================================
 
-function configurarFlashcard(
-    cardId,
-    perguntaId,
-    respostaId,
-    instrucaoId
-) {
-    const card = document.getElementById(cardId);
-    const pergunta = document.getElementById(perguntaId);
-    const resposta = document.getElementById(respostaId);
-    const instrucao = document.getElementById(instrucaoId);
+function configurarFlashcards() {
 
-    if (!card || !pergunta || !resposta || !instrucao) {
-        return;
-    }
+    const flashcards = document.querySelectorAll(".flashcard");
 
-    card.addEventListener("click", () => {
-        const estaAberto =
-            card.getAttribute("aria-expanded") === "true";
+    flashcards.forEach((card) => {
 
-        const novoEstado = !estaAberto;
+        const pergunta = card.querySelector(".pergunta");
+        const resposta = card.querySelector(".resposta");
+        const instrucao = card.querySelector(".instrucao");
 
-        card.setAttribute(
-            "aria-expanded",
-            String(novoEstado)
-        );
+        card.addEventListener("click", () => {
 
-        pergunta.hidden = novoEstado;
-        resposta.hidden = !novoEstado;
+            const estaAberto =
+                card.getAttribute("aria-expanded") === "true";
 
-        instrucao.textContent = novoEstado
-            ? "Clique para ver a pergunta"
-            : "Clique para revelar a resposta";
+            const novoEstado = !estaAberto;
+
+            card.setAttribute(
+                "aria-expanded",
+                String(novoEstado)
+            );
+
+            pergunta.hidden = novoEstado;
+            resposta.hidden = !novoEstado;
+
+            instrucao.textContent = novoEstado
+                ? "Clique para ver a pergunta"
+                : "Clique para revelar a resposta";
+        });
     });
 }
 
-// Flashcard de Nomes Significativos
-configurarFlashcard(
-    "flashcard-nomes",
-    "pergunta-flashcard",
-    "resposta-flashcard",
-    "instrucao-flashcard"
-);
-
-// Flashcard de Funções e Métodos
-configurarFlashcard(
-    "flashcard-funcoes",
-    "pergunta-funcoes",
-    "resposta-funcoes",
-    "instrucao-funcoes"
-);
-
-// ==========================================
-// QUIZZES INTERATIVOS
-// ==========================================
+// ======================================
+// QUIZZES
+// ======================================
 
 function configurarQuiz(quiz) {
+
     const alternativas = quiz.querySelectorAll(".alternativa");
     const resultado = quiz.querySelector(".resultado");
     const botaoReiniciar = quiz.querySelector(".reiniciar");
 
     alternativas.forEach((alternativa) => {
+
         alternativa.addEventListener("click", () => {
 
             const acertou =
                 alternativa.dataset.correta === "true";
 
-            // Bloqueia respostas após a escolha
             alternativas.forEach((botao) => {
+
                 botao.disabled = true;
 
                 if (botao.dataset.correta === "true") {
@@ -85,18 +68,17 @@ function configurarQuiz(quiz) {
                 alternativa.classList.add("incorreta");
 
                 resultado.textContent =
-                    "Ainda não! A alternativa destacada " +
-                    "em verde é a resposta correta.";
+                    "Ainda não! A resposta correta está destacada em verde.";
             }
 
             botaoReiniciar.hidden = false;
         });
     });
 
-    // Reinicia somente o quiz selecionado
     botaoReiniciar.addEventListener("click", () => {
 
         alternativas.forEach((alternativa) => {
+
             alternativa.disabled = false;
 
             alternativa.classList.remove(
@@ -110,9 +92,18 @@ function configurarQuiz(quiz) {
     });
 }
 
-// Configura todos os quizzes da página
-const quizzes = document.querySelectorAll("[data-quiz]");
+function configurarQuizzes() {
 
-quizzes.forEach((quiz) => {
-    configurarQuiz(quiz);
-});
+    const quizzes = document.querySelectorAll("[data-quiz]");
+
+    quizzes.forEach((quiz) => {
+        configurarQuiz(quiz);
+    });
+}
+
+// ======================================
+// INICIALIZAÇÃO
+// ======================================
+
+configurarFlashcards();
+configurarQuizzes();
