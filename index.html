@@ -1,25 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Clean Code | Resumo Interativo</title>
-
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <main class="pagina">
-
-        <!-- CABEÇALHO -->
 
         <header class="cabecalho">
             <div>
                 <span class="etiqueta">GUIA DE ESTUDOS</span>
                 <h1>Clean Code<span class="ponto">.</span></h1>
-
                 <p class="descricao">
                     Um resumo interativo para aprender a escrever
                     códigos claros, organizados e fáceis de manter.
@@ -32,8 +28,6 @@
             </div>
         </header>
 
-        <!-- NAVEGAÇÃO -->
-
         <nav class="navegacao" aria-label="Navegação do resumo">
             <a href="#conceitos">Conceitos</a>
             <a href="#nomes">Nomes</a>
@@ -41,10 +35,9 @@
             <a href="#comentarios">Comentários</a>
             <a href="#formatacao">Formatação</a>
             <a href="#erros">Tratamento de erros</a>
-            <a href="#revisao">Revisão</a>
         </nav>
 
-        <!-- CONCEITOS FUNDAMENTAIS -->
+        <!-- INTRODUÇÃO -->
 
         <section id="conceitos" class="secao">
             <div class="titulo-secao">
@@ -52,28 +45,23 @@
                     <span class="etiqueta">INTRODUÇÃO</span>
                     <h2>Conceitos fundamentais</h2>
                 </div>
-
-                <p>Clique nos cards para saber mais.</p>
+                <p>Os princípios básicos do código limpo.</p>
             </div>
 
             <div class="grade-conceitos">
-
                 <article class="card">
                     <span class="numero-card">01 / INTRODUÇÃO</span>
                     <h3>O que é Clean Code?</h3>
-
                     <p>
                         É a prática de escrever código claro,
                         compreensível e fácil de manter.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Um código limpo comunica sua intenção,
+                                Código limpo comunica sua intenção,
                                 evita complexidade desnecessária e
                                 facilita futuras alterações.
                             </p>
@@ -84,20 +72,17 @@
                 <article class="card">
                     <span class="numero-card">02 / NOMENCLATURA</span>
                     <h3>Nomes significativos</h3>
-
                     <p>
                         Variáveis, classes e métodos devem ter
                         nomes que expliquem sua finalidade.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Prefira nomes como totalCompra
-                                e CalcularDesconto em vez de nomes
+                                Prefira nomes como totalCompra e
+                                CalcularDesconto em vez de nomes
                                 vagos como x ou abc.
                             </p>
                         </div>
@@ -107,26 +92,22 @@
                 <article class="card">
                     <span class="numero-card">03 / ORGANIZAÇÃO</span>
                     <h3>Funções</h3>
-
                     <p>
                         Cada função deve ter uma finalidade
                         bem definida.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Funções pequenas e coesas
-                                costumam ser mais fáceis de
-                                testar, entender e modificar.
+                                Funções pequenas e coesas costumam
+                                ser mais fáceis de testar,
+                                entender e modificar.
                             </p>
                         </div>
                     </details>
                 </article>
-
             </div>
         </section>
 
@@ -138,23 +119,17 @@
                     <span class="etiqueta">APROFUNDAMENTO 01</span>
                     <h2>Nomes significativos</h2>
                 </div>
-
                 <p>Um bom nome explica a intenção do código.</p>
             </div>
 
             <div class="grade-conceitos">
-
                 <article class="card">
                     <span class="numero-card">REGRA 01</span>
                     <h3>Seja descritivo</h3>
-
                     <p>Mostre o significado das informações.</p>
-
                     <div class="separador"></div>
-
                     <p class="exemplo-label">EVITE</p>
                     <code class="codigo-inline">int x = 20;</code>
-
                     <p class="exemplo-label">PREFIRA</p>
                     <code class="codigo-inline">int idade = 20;</code>
                 </article>
@@ -162,17 +137,13 @@
                 <article class="card">
                     <span class="numero-card">REGRA 02</span>
                     <h3>Evite abreviações</h3>
-
                     <p>
                         Abreviações obscuras dificultam
                         a compreensão do código.
                     </p>
-
                     <div class="separador"></div>
-
                     <p class="exemplo-label">EVITE</p>
                     <code class="codigo-inline">int qtdUsr = 10;</code>
-
                     <p class="exemplo-label">PREFIRA</p>
                     <code class="codigo-inline">int quantidadeUsuarios = 10;</code>
                 </article>
@@ -180,21 +151,16 @@
                 <article class="card">
                     <span class="numero-card">REGRA 03</span>
                     <h3>Mantenha consistência</h3>
-
                     <p>
                         Respeite as convenções da linguagem
                         e do projeto.
                     </p>
-
                     <div class="separador"></div>
-
                     <p class="exemplo-label">VARIÁVEL EM C#</p>
                     <code class="codigo-inline">int totalCompra = 50;</code>
-
                     <p class="exemplo-label">MÉTODO EM C#</p>
                     <code class="codigo-inline">CalcularDesconto()</code>
                 </article>
-
             </div>
 
             <div class="card flashcard-container">
@@ -203,30 +169,20 @@
                     <h3>Teste sua memória</h3>
                     <p>Tente responder antes de revelar.</p>
                 </div>
-
-                <button
-                    class="flashcard"
-                    type="button"
-                    aria-expanded="false"
-                >
+                <button class="flashcard" type="button" aria-expanded="false">
                     <span class="pergunta">
                         Por que devemos evitar nomes como x ou temp?
                     </span>
-
                     <span class="resposta" hidden>
-                        Porque nomes vagos não deixam clara
-                        a intenção do código e dificultam
-                        a manutenção.
+                        Porque nomes vagos dificultam a compreensão
+                        da intenção do código e sua manutenção.
                     </span>
-
-                    <small class="instrucao">
-                        Clique para revelar a resposta
-                    </small>
+                    <small class="instrucao">Clique para revelar a resposta</small>
                 </button>
             </div>
         </section>
 
-        <!-- FUNÇÕES E MÉTODOS -->
+        <!-- FUNÇÕES -->
 
         <section id="funcoes" class="secao">
             <div class="titulo-secao">
@@ -234,20 +190,15 @@
                     <span class="etiqueta">APROFUNDAMENTO 02</span>
                     <h2>Funções e métodos</h2>
                 </div>
-
-                <p>Métodos simples e com objetivos claros.</p>
+                <p>Métodos simples e objetivos.</p>
             </div>
 
             <div class="grade-conceitos">
-
                 <article class="card">
                     <span class="numero-card">PRINCÍPIO 01</span>
                     <h3>Responsabilidade única</h3>
-
                     <p>Cada método deve ter uma tarefa definida.</p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Ver explicação</summary>
                         <div class="detalhes-conteudo">
@@ -263,19 +214,14 @@
                 <article class="card">
                     <span class="numero-card">PRINCÍPIO 02</span>
                     <h3>Funções pequenas</h3>
-
-                    <p>
-                        Prefira métodos curtos, claros e coesos.
-                    </p>
-
+                    <p>Prefira métodos curtos, claros e coesos.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Ver explicação</summary>
                         <div class="detalhes-conteudo">
                             <p>
                                 Não existe número mágico de linhas.
-                                O objetivo é evitar responsabilidades
+                                O importante é evitar responsabilidades
                                 demais na mesma função.
                             </p>
                         </div>
@@ -285,23 +231,19 @@
                 <article class="card">
                     <span class="numero-card">PRINCÍPIO 03</span>
                     <h3>Parâmetros</h3>
-
                     <p>Evite listas excessivas de parâmetros.</p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Ver explicação</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Muitos parâmetros podem dificultar
-                                testes e chamadas. Quando fizer
-                                sentido, agrupe dados relacionados.
+                                Muitos parâmetros dificultam testes
+                                e chamadas. Quando fizer sentido,
+                                agrupe dados relacionados.
                             </p>
                         </div>
                     </details>
                 </article>
-
             </div>
 
             <div class="titulo-interno">
@@ -310,14 +252,11 @@
             </div>
 
             <div class="grade-exemplos">
-
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-ruim">
                         ANTES — RESPONSABILIDADES MISTURADAS
                     </span>
-
                     <h3>Um método faz tudo</h3>
-
                     <pre><code>void MostrarTotal(
     decimal preco,
     int quantidade)
@@ -328,10 +267,8 @@
     Console.WriteLine(
         $"Total: {total:C}");
 }</code></pre>
-
                     <p>
-                        O método calcula e apresenta
-                        o resultado ao mesmo tempo.
+                        O método calcula e apresenta o resultado.
                     </p>
                 </article>
 
@@ -339,9 +276,7 @@
                     <span class="etiqueta exemplo-bom">
                         DEPOIS — RESPONSABILIDADES SEPARADAS
                     </span>
-
                     <h3>Métodos com foco</h3>
-
                     <pre><code>decimal CalcularTotal(
     decimal preco,
     int quantidade)
@@ -359,13 +294,10 @@ decimal total =
     CalcularTotal(20m, 5);
 
 MostrarTotal(total);</code></pre>
-
                     <p>
-                        Agora cada método tem
-                        uma finalidade definida.
+                        Cada método possui uma finalidade definida.
                     </p>
                 </article>
-
             </div>
 
             <div class="card flashcard-container">
@@ -374,53 +306,37 @@ MostrarTotal(total);</code></pre>
                     <h3>Funções e métodos</h3>
                     <p>Responda mentalmente antes de clicar.</p>
                 </div>
-
-                <button
-                    class="flashcard"
-                    type="button"
-                    aria-expanded="false"
-                >
+                <button class="flashcard" type="button" aria-expanded="false">
                     <span class="pergunta">
                         O que significa responsabilidade única?
                     </span>
-
                     <span class="resposta" hidden>
-                        Significa que o método tem uma finalidade
+                        Um método deve possuir uma finalidade
                         bem definida, sem acumular tarefas
                         de naturezas diferentes.
                     </span>
-
-                    <small class="instrucao">
-                        Clique para revelar a resposta
-                    </small>
+                    <small class="instrucao">Clique para revelar a resposta</small>
                 </button>
             </div>
 
             <div class="card quiz" data-quiz>
                 <span class="numero-card">EXERCÍCIO — FUNÇÕES</span>
-
                 <h3>Qual método está mais alinhado ao Clean Code?</h3>
 
                 <div class="alternativas">
                     <button class="alternativa" data-correta="false">
                         A. Um método que calcula, salva e imprime um relatório.
                     </button>
-
-                    <button
-                        class="alternativa"
-                        data-correta="true"
-                        data-explicacao="Um método com responsabilidade bem definida é mais fácil de entender, testar e modificar."
-                    >
+                    <button class="alternativa" data-correta="true"
+                        data-explicacao="Métodos com responsabilidades claras são mais fáceis de entender, testar e modificar.">
                         B. Um método CalcularMedia() que apenas calcula a média.
                     </button>
-
                     <button class="alternativa" data-correta="false">
                         C. Um método com parâmetros confusos e excessivos.
                     </button>
                 </div>
 
                 <p class="resultado" role="status" aria-live="polite"></p>
-
                 <button class="reiniciar" type="button" hidden>
                     Tentar novamente
                 </button>
@@ -435,29 +351,24 @@ MostrarTotal(total);</code></pre>
                     <span class="etiqueta">APROFUNDAMENTO 03</span>
                     <h2>Comentários</h2>
                 </div>
-
                 <p>Explique o necessário, evite o óbvio.</p>
             </div>
 
             <div class="grade-conceitos">
-
                 <article class="card">
                     <span class="numero-card">REGRA 01</span>
                     <h3>Evite comentários óbvios</h3>
-
                     <p>
-                        Não use comentários que apenas
-                        repetem o que o código já informa.
+                        Não repita em comentários aquilo
+                        que o código já informa.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Por quê?</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Eles aumentam a quantidade de texto
-                                sem acrescentar informação útil.
+                                Comentários redundantes aumentam
+                                o texto sem fornecer informações úteis.
                             </p>
                         </div>
                     </details>
@@ -466,21 +377,17 @@ MostrarTotal(total);</code></pre>
                 <article class="card">
                     <span class="numero-card">REGRA 02</span>
                     <h3>Explique o motivo</h3>
-
                     <p>
-                        Comentários podem ser úteis para explicar
-                        decisões que não são evidentes.
+                        Documente decisões que não sejam evidentes.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Quando usar?</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Por exemplo, para documentar uma
-                                regra de negócio inesperada ou
-                                uma limitação externa relevante.
+                                Para explicar regras de negócio,
+                                limitações externas e decisões
+                                importantes de implementação.
                             </p>
                         </div>
                     </details>
@@ -489,63 +396,45 @@ MostrarTotal(total);</code></pre>
                 <article class="card">
                     <span class="numero-card">REGRA 03</span>
                     <h3>Mantenha atualizado</h3>
-
                     <p>
-                        Um comentário desatualizado pode
-                        confundir mais do que ajudar.
+                        Comentários desatualizados podem confundir.
                     </p>
-
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Ao alterar uma regra importante,
-                                revise os comentários relacionados.
-                                Remova os que perderam a utilidade.
+                                Revise comentários quando modificar
+                                regras e comportamentos do sistema.
                             </p>
                         </div>
                     </details>
                 </article>
-
             </div>
 
             <div class="titulo-interno">
                 <span class="etiqueta">EXEMPLO EM C#</span>
-                <h3>Um comentário desnecessário</h3>
+                <h3>Comentários redundantes</h3>
             </div>
 
             <div class="grade-exemplos">
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-ruim">
-                        ANTES — COMENTÁRIO REDUNDANTE
+                        ANTES — COMENTÁRIO DESNECESSÁRIO
                     </span>
-
                     <h3>Explicando o óbvio</h3>
-
                     <pre><code>// Soma um ao contador
 contador = contador + 1;</code></pre>
-
-                    <p>
-                        O comentário apenas repete
-                        a operação escrita no código.
-                    </p>
+                    <p>O comentário apenas descreve a operação.</p>
                 </article>
 
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-bom">
                         DEPOIS — CÓDIGO AUTOEXPLICATIVO
                     </span>
-
                     <h3>Clareza sem excesso</h3>
-
                     <pre><code>contador++;</code></pre>
-
-                    <p>
-                        A operação é simples e não
-                        precisa de explicação adicional.
-                    </p>
+                    <p>A operação não precisa de explicação extra.</p>
                 </article>
             </div>
         </section>
@@ -558,30 +447,22 @@ contador = contador + 1;</code></pre>
                     <span class="etiqueta">APROFUNDAMENTO 04</span>
                     <h2>Formatação e organização</h2>
                 </div>
-
                 <p>Uma boa estrutura facilita a leitura.</p>
             </div>
 
             <div class="grade-conceitos">
-
                 <article class="card">
                     <span class="numero-card">REGRA 01</span>
                     <h3>Indentação</h3>
-
-                    <p>
-                        Use recuos consistentes para deixar
-                        clara a estrutura do código.
-                    </p>
-
+                    <p>Use recuos consistentes nos blocos de código.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Indentação facilita reconhecer
-                                blocos de if, loops, classes
-                                e métodos.
+                                Os recuos facilitam reconhecer
+                                estruturas condicionais, loops,
+                                classes e métodos.
                             </p>
                         </div>
                     </details>
@@ -590,21 +471,14 @@ contador = contador + 1;</code></pre>
                 <article class="card">
                     <span class="numero-card">REGRA 02</span>
                     <h3>Espaçamento</h3>
-
-                    <p>
-                        Use espaços e linhas em branco
-                        para separar ideias relacionadas.
-                    </p>
-
+                    <p>Separe visualmente partes relacionadas do código.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Um código visualmente organizado
-                                é mais fácil de percorrer
-                                e revisar.
+                                Espaços e linhas em branco ajudam
+                                a identificar grupos de instruções.
                             </p>
                         </div>
                     </details>
@@ -613,26 +487,18 @@ contador = contador + 1;</code></pre>
                 <article class="card">
                     <span class="numero-card">REGRA 03</span>
                     <h3>Consistência</h3>
-
-                    <p>
-                        Siga os mesmos padrões de
-                        formatação em todo o projeto.
-                    </p>
-
+                    <p>Siga os padrões de formatação do projeto.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Utilize um formatador automático
-                                e respeite as convenções
-                                adotadas pela equipe.
+                                Formatadores automáticos ajudam
+                                a manter um padrão em toda a equipe.
                             </p>
                         </div>
                     </details>
                 </article>
-
             </div>
 
             <div class="titulo-interno">
@@ -645,9 +511,7 @@ contador = contador + 1;</code></pre>
                     <span class="etiqueta exemplo-ruim">
                         ANTES — FORMATAÇÃO CONFUSA
                     </span>
-
                     <h3>Difícil de ler</h3>
-
                     <pre><code>if (idade >= 18)
 {
 Console.WriteLine("Maior");
@@ -656,20 +520,14 @@ else
 {
 Console.WriteLine("Menor");
 }</code></pre>
-
-                    <p>
-                        Os comandos não estão visualmente
-                        alinhados aos seus blocos.
-                    </p>
+                    <p>Os comandos não possuem recuos adequados.</p>
                 </article>
 
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-bom">
                         DEPOIS — BOA INDENTAÇÃO
                     </span>
-
                     <h3>Mais legível</h3>
-
                     <pre><code>if (idade >= 18)
 {
     Console.WriteLine("Maior");
@@ -678,19 +536,12 @@ else
 {
     Console.WriteLine("Menor");
 }</code></pre>
-
-                    <p>
-                        O recuo evidencia quais instruções
-                        pertencem a cada bloco.
-                    </p>
+                    <p>Os recuos deixam os blocos mais claros.</p>
                 </article>
             </div>
 
             <div class="card quiz" data-quiz>
-                <span class="numero-card">
-                    EXERCÍCIO — ENCONTRE O PROBLEMA
-                </span>
-
+                <span class="numero-card">EXERCÍCIO — COMENTÁRIOS</span>
                 <h3>O que podemos melhorar neste código?</h3>
 
                 <pre class="trecho-exercicio"><code>// Aumenta a idade em um ano
@@ -698,24 +549,18 @@ idade = idade + 1;</code></pre>
 
                 <div class="alternativas">
                     <button class="alternativa" data-correta="false">
-                        A. Adicionar ainda mais comentários.
+                        A. Adicionar mais comentários.
                     </button>
-
-                    <button
-                        class="alternativa"
-                        data-correta="true"
-                        data-explicacao="O comentário apenas descreve a operação. O código já é suficientemente claro sem essa explicação."
-                    >
+                    <button class="alternativa" data-correta="true"
+                        data-explicacao="O comentário apenas repete a operação. Podemos removê-lo sem perder clareza.">
                         B. Remover o comentário redundante.
                     </button>
-
                     <button class="alternativa" data-correta="false">
-                        C. Trocar o nome idade por x.
+                        C. Trocar idade por x.
                     </button>
                 </div>
 
                 <p class="resultado" role="status" aria-live="polite"></p>
-
                 <button class="reiniciar" type="button" hidden>
                     Tentar novamente
                 </button>
@@ -730,35 +575,22 @@ idade = idade + 1;</code></pre>
                     <span class="etiqueta">APROFUNDAMENTO 05</span>
                     <h2>Tratamento de erros</h2>
                 </div>
-
-                <p>Erros claros e tratados de maneira adequada.</p>
+                <p>Validação e tratamento de exceções em C#.</p>
             </div>
 
             <div class="grade-conceitos">
-
                 <article class="card">
                     <span class="numero-card">CONCEITO 01</span>
                     <h3>Try e Catch</h3>
-
-                    <p>
-                        Permitem lidar com exceções que
-                        podem acontecer durante a execução.
-                    </p>
-
+                    <p>Permitem lidar com exceções na execução.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                O try contém o código que pode
-                                lançar uma exceção.
-                            </p>
-
-                            <p>
-                                O catch captura tipos específicos
-                                de exceções para que possamos
-                                tratá-las adequadamente.
+                                O try contém operações que podem
+                                lançar exceções. O catch permite
+                                capturar e tratar erros específicos.
                             </p>
                         </div>
                     </details>
@@ -767,27 +599,15 @@ idade = idade + 1;</code></pre>
                 <article class="card">
                     <span class="numero-card">CONCEITO 02</span>
                     <h3>Finally</h3>
-
-                    <p>
-                        Permite executar ações de limpeza
-                        ao sair de um bloco try.
-                    </p>
-
+                    <p>Executa ações de limpeza ao sair do try.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                O finally normalmente é executado
-                                independentemente de uma exceção
-                                ter sido lançada ou não.
-                            </p>
-
-                            <p>
-                                Pode ajudar na liberação de recursos.
-                                Em C#, também podemos usar using
-                                para gerenciar objetos descartáveis.
+                                O bloco finally normalmente executa
+                                mesmo quando uma exceção acontece.
+                                É útil para ações de encerramento.
                             </p>
                         </div>
                     </details>
@@ -796,71 +616,48 @@ idade = idade + 1;</code></pre>
                 <article class="card">
                     <span class="numero-card">CONCEITO 03</span>
                     <h3>Validação</h3>
-
-                    <p>
-                        Verifique entradas e regras antes
-                        de executar operações.
-                    </p>
-
+                    <p>Verifique dados antes de utilizá-los.</p>
                     <div class="separador"></div>
-
                     <details>
                         <summary>Entenda melhor</summary>
                         <div class="detalhes-conteudo">
                             <p>
-                                Por exemplo, podemos usar TryParse
-                                para verificar se um texto representa
-                                um número válido.
-                            </p>
-
-                            <p>
-                                Também devemos evitar capturar
-                                exceções apenas para ignorá-las.
+                                Validar entradas evita falhas
+                                previsíveis. Em C#, TryParse é
+                                útil para conversões seguras.
                             </p>
                         </div>
                     </details>
                 </article>
-
             </div>
 
             <div class="titulo-interno">
                 <span class="etiqueta">EXEMPLO EM C#</span>
-                <h3>Tratando erros de conversão</h3>
-
-                <p class="descricao">
-                    Imagine que recebemos um texto e precisamos
-                    convertê-lo em número.
-                </p>
+                <h3>Validando uma conversão</h3>
             </div>
 
             <div class="grade-exemplos">
-
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-ruim">
-                        ANTES — CONVERSÃO SEM VALIDAÇÃO
+                        ANTES — SEM VALIDAÇÃO
                     </span>
-
-                    <h3>Pode lançar uma exceção</h3>
-
+                    <h3>Pode lançar exceção</h3>
                     <pre><code>string entrada = "abc";
 
 int idade = int.Parse(entrada);
 
 Console.WriteLine(idade);</code></pre>
-
                     <p>
-                        Se o texto não representar um número
-                        válido, o Parse lança uma exceção.
+                        Parse lança exceção quando o texto
+                        não possui formato numérico válido.
                     </p>
                 </article>
 
                 <article class="card codigo-card">
                     <span class="etiqueta exemplo-bom">
-                        DEPOIS — VALIDAÇÃO EXPLÍCITA
+                        DEPOIS — COM VALIDAÇÃO
                     </span>
-
                     <h3>Usando TryParse</h3>
-
                     <pre><code>string entrada = "abc";
 
 if (int.TryParse(
@@ -872,23 +669,21 @@ if (int.TryParse(
 else
 {
     Console.WriteLine(
-        "Digite uma idade válida.");
+        "Digite um número válido.");
 }</code></pre>
-
                     <p>
-                        TryParse informa se conseguiu converter
-                        o valor, sem lançar exceção por formato inválido.
+                        TryParse permite verificar o resultado
+                        da conversão sem exceção por formato inválido.
                     </p>
                 </article>
-
             </div>
 
             <div class="titulo-interno">
                 <span class="etiqueta">EXEMPLO ADICIONAL</span>
-                <h3>Capturando uma exceção específica</h3>
+                <h3>Try, Catch e Finally</h3>
             </div>
 
-            <div class="card codigo-card">
+            <article class="card codigo-card">
                 <pre><code>try
 {
     string conteudo =
@@ -899,143 +694,72 @@ else
 catch (FileNotFoundException)
 {
     Console.WriteLine(
-        "O arquivo não foi encontrado.");
+        "Arquivo não encontrado.");
 }
 finally
 {
     Console.WriteLine(
-        "Tentativa de leitura encerrada.");
+        "Leitura encerrada.");
 }</code></pre>
-
                 <p>
-                    Aqui, o catch trata especificamente um arquivo
-                    não encontrado. O finally executa a mensagem
-                    de encerramento. Outras exceções continuam
-                    podendo se propagar, o que é melhor do que
-                    escondê-las silenciosamente.
+                    O catch trata especificamente um arquivo
+                    não encontrado. O finally executa a ação
+                    de encerramento, enquanto outras exceções
+                    podem continuar se propagando.
                 </p>
-            </div>
+            </article>
 
             <div class="card flashcard-container">
                 <div>
                     <span class="numero-card">FLASHCARD</span>
                     <h3>Tratamento de erros</h3>
-                    <p>Tente responder antes de clicar.</p>
+                    <p>Tente responder antes de revelar.</p>
                 </div>
-
-                <button
-                    class="flashcard"
-                    type="button"
-                    aria-expanded="false"
-                >
+                <button class="flashcard" type="button" aria-expanded="false">
                     <span class="pergunta">
                         Qual é a diferença entre validação
                         e tratamento de exceções?
                     </span>
-
                     <span class="resposta" hidden>
-                        A validação verifica dados e condições
-                        esperadas antes de executar uma operação.
-                        O tratamento de exceções lida com falhas
-                        sinalizadas durante a execução.
+                        A validação verifica condições esperadas
+                        antes de executar operações. O tratamento
+                        de exceções lida com falhas sinalizadas
+                        durante a execução.
                     </span>
-
-                    <small class="instrucao">
-                        Clique para revelar a resposta
-                    </small>
+                    <small class="instrucao">Clique para revelar a resposta</small>
                 </button>
             </div>
 
             <div class="card quiz" data-quiz>
-                <span class="numero-card">
-                    EXERCÍCIO — TRATAMENTO DE ERROS
-                </span>
-
-                <h3>
-                    Qual é a melhor opção para converter um texto
-                    digitado pelo usuário em um número inteiro?
-                </h3>
+                <span class="numero-card">EXERCÍCIO — VALIDAÇÃO</span>
+                <h3>Qual é a melhor maneira de verificar uma conversão numérica?</h3>
 
                 <div class="alternativas">
                     <button class="alternativa" data-correta="false">
                         A. Usar int.Parse sem verificar a entrada.
                     </button>
-
-                    <button
-                        class="alternativa"
-                        data-correta="true"
-                        data-explicacao="TryParse permite verificar se a conversão deu certo sem lançar uma exceção por entrada inválida. É apropriado quando uma entrada incorreta é uma situação esperada."
-                    >
+                    <button class="alternativa" data-correta="true"
+                        data-explicacao="TryParse permite verificar a conversão sem lançar exceção por formato inválido.">
                         B. Usar int.TryParse e verificar o resultado.
                     </button>
-
                     <button class="alternativa" data-correta="false">
-                        C. Ignorar qualquer erro de conversão.
+                        C. Ignorar erros de conversão.
                     </button>
                 </div>
 
                 <p class="resultado" role="status" aria-live="polite"></p>
-
-                <button class="reiniciar" type="button" hidden>
-                    Tentar novamente
-                </button>
-            </div>
-
-        </section>
-
-        <!-- REVISÃO GERAL -->
-
-        <section id="revisao" class="secao">
-            <div class="titulo-secao">
-                <div>
-                    <span class="etiqueta">REVISÃO GERAL</span>
-                    <h2>Hora de revisar</h2>
-                </div>
-
-                <p>Teste o que aprendeu!</p>
-            </div>
-
-            <div class="card quiz" data-quiz>
-                <span class="numero-card">QUESTÃO 01</span>
-
-                <h3>
-                    Qual alternativa representa uma boa
-                    prática de Clean Code?
-                </h3>
-
-                <div class="alternativas">
-                    <button class="alternativa" data-correta="false">
-                        A. Usar nomes sem significado.
-                    </button>
-
-                    <button
-                        class="alternativa"
-                        data-correta="true"
-                        data-explicacao="Funções com responsabilidades claras favorecem legibilidade, manutenção e testes. O mesmo princípio se aplica à organização do sistema."
-                    >
-                        B. Criar funções com responsabilidades claras.
-                    </button>
-
-                    <button class="alternativa" data-correta="false">
-                        C. Escrever todo o programa em uma única função.
-                    </button>
-                </div>
-
-                <p class="resultado" role="status" aria-live="polite"></p>
-
                 <button class="reiniciar" type="button" hidden>
                     Tentar novamente
                 </button>
             </div>
         </section>
-
-        <!-- RODAPÉ -->
 
         <footer class="rodape">
-            Clean Code • Resumo interativo desenvolvido
-            com HTML, CSS e JavaScript
+            Clean Code • Resumo interativo desenvolvido com
+            HTML, CSS e JavaScript
         </footer>
 
     </main>
 </body>
+
 </html>
