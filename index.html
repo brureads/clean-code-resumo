@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Code Universe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="universo">
+        <header class="hero">
+            <p class="marca">SPACE STUDY MODE</p>
+
+            <h1>Clean Code Universe</h1>
+
+            <p class="subtitulo">
+                Explore os princípios do Clean Code como se cada conceito
+                fosse uma nova galáxia a ser descoberta.
+            </p>
+
+            <div class="hero-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Estudo Interativo</span>
+            </div>
+        </header>
+
+        <section class="painel">
+            <article class="cartao destaque">
+                <p class="cartao-topo">MISSÃO INICIAL</p>
+                <h2>O que é Clean Code?</h2>
+                <p>
+                    Clean Code é a prática de escrever código de forma clara,
+                    organizada e fácil de manter. Não basta funcionar: o código
+                    também precisa ser compreensível.
+                </p>
+            </article>
+
+            <article class="cartao mini">
+                <p class="cartao-topo">OBJETIVO</p>
+                <h3>Por que isso importa?</h3>
+                <p>
+                    Porque código confuso atrapalha manutenção, correções
+                    e evolução do sistema.
+                </p>
+            </article>
+
+            <article class="cartao mini">
+                <p class="cartao-topo">FOCO</p>
+                <h3>O que vamos estudar?</h3>
+                <p>
+                    Nomes significativos, funções, comentários, organização,
+                    legibilidade e boas práticas.
+                </p>
+            </article>
+        </section>
+
+        <section class="secao-estudo">
+            <div class="secao-titulo">
+                <p class="cartao-topo">CARD INTERATIVO</p>
+                <h2>Primeira parada da jornada</h2>
+                <p>
+                    Clique no card abaixo para abrir e fechar a explicação.
+                </p>
+            </div>
+
+            <button class="card-interativo" id="card-clean-code" type="button" aria-expanded="false"
+                aria-controls="resposta-clean-code">
+                <span class="orbita"></span>
+
+                <span class="card-interativo-topo">
+                    PLANETA 01
+                </span>
+
+                <span class="card-interativo-titulo">
+                    O que é Clean Code?
+                </span>
+
+                <span class="card-interativo-instrucao">
+                    Clique para explorar
+                </span>
+
+                <span class="card-interativo-resposta" id="resposta-clean-code" hidden>
+                    Clean Code é um código limpo, claro e fácil de entender.
+
+                    A ideia principal é escrever de forma que outra pessoa
+                    — ou até você no futuro — consiga ler e compreender
+                    rapidamente o que aquele código faz.
+
+                    Um código limpo costuma ser:
+                    • legível
+                    • simples
+                    • organizado
+                    • fácil de manter
+                    • fácil de alterar
+                </span>
+            </button>
+        </section>
+
+        <footer class="rodape">
+            <p>Feito por uma exploradora espacial do código. ✦</p>
+        </footer>
+    </main>
+</body>
+
+</html>
